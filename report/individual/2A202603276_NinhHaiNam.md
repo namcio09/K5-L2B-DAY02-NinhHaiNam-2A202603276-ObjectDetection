@@ -4,10 +4,10 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email:
-- Lớp:
+- Họ tên:Ninh Hai Nam
+- MSSV:2A202603276
+- Email:26ai.namnh10@vinuni.edu.vn
+- Lớp:2B-LAB-E402
 - Link repo bài làm:
 - Link Colab đã chạy:
 
@@ -17,10 +17,10 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 
 ## 3. Annotation và self-QC
 
-- Số file nhãn train:
-- Kết quả checker và lỗi đã xử lý:
-- Danh sách ít nhất 10 ảnh đã rà bằng mắt:
-- Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa:
+- Số file nhãn train:50
+- Kết quả checker và lỗi đã xử lý: Đạt 50/50 file nhãn hợp lệ, không có lỗi
+- Danh sách ít nhất 10 ảnh đã rà bằng mắt:drive_010 -> drive_020
+- Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa: Khi rà lại còn thiếu 1 vài đối tượng car nhỏ nhưng vẫn có thể nhận diện được. Đã bổ sung thêm bounding box và thực hiện export lại file train từ cvat
 - Commit khóa nhãn ban đầu:
 
 ## 4. Gold QC và rework
