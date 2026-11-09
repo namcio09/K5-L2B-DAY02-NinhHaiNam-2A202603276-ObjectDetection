@@ -21,22 +21,21 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 - Kết quả checker và lỗi đã xử lý: Đạt 50/50 file nhãn hợp lệ, không có lỗi
 - Danh sách ít nhất 10 ảnh đã rà bằng mắt:drive_010 -> drive_020
 - Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa: Khi rà lại còn thiếu 1 vài đối tượng car nhỏ nhưng vẫn có thể nhận diện được. Đã bổ sung thêm bounding box và thực hiện export lại file train từ cvat
-- Commit khóa nhãn ban đầu:
+- Commit khóa nhãn ban đầu:b093396
 
 ## 4. Gold QC và rework
 
 | Chỉ số | Trước sửa | Sau sửa nếu có |
 |---|---:|---:|
-| TP | | |
-| FP | | |
-| FN | | |
-| Precision | | |
-| Recall | | |
-| F1 | | |
-| mean_iou_of_matches | | |
-| passed | | |
-
-Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
+| TP |454|458|
+| FP |521 |390 |
+| FN |199 |195 |
+| Precision |0.4656 |0.5401 |
+| Recall |0.6953 |0.7014 |
+| F1 |0.5577 |0.6103 |
+| mean_iou_of_matches |0.8529 |0.8523 |
+| passed |false |false |
+- Chú thích: Đã loại bỏ box thừa (chủ yếu là xe đỗ ven đường/bãi ngoài làn lưu thông mà gold không gán), không đổi class, không thêm box, không sửa gold. F1 tăng 0.5577 → 0.6103. Kết quả vẫn `false` vì gold lệch guideline (đã được Lab Coach xác nhận và cho phép bỏ qua bước đánh giá gold)
 
 ## 5. Kết quả YOLO
 
